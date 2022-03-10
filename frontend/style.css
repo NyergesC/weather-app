@@ -102,15 +102,20 @@ body {
     width: 150px;
     height: 150px;
     position: absolute;
-    top: 33%;
-    right: 40%;
+    top: 47%;
+    right: 32%;
     text-align: center;
     padding: 20px 0;
     border-radius: 50%;
     color: white;
     background-image: linear-gradient(to bottom right, #b839ce, #e331a3);
-/*     box-shadow: 5px 5px 15px #bfa8bc; */
-    
+    transform: rotate(-45deg) translateX(-200px) rotate(45deg);
+     animation: rotating 26s linear infinite;
+}
+
+@-webkit-keyframes rotating {
+	to   {  -webkit-transform: rotate(360deg) translateX(-200px) rotate(-360deg); }
+	from { 	-webkit-transform: rotate(0deg) translateX(-200px) rotate(0deg); }
 }
 
 .humidity h4{
@@ -137,6 +142,7 @@ body {
     box-shadow: 5px 5px 15px #bfa8bc;
 }
 
+
 .wind img{
     padding-top: 23px;
     padding-bottom: 10px;
@@ -155,16 +161,21 @@ body {
     width: 150px;
     height: 150px;
     position: absolute;
-    bottom: 22%;
-    right: 25%;
+    top: 48%;
+    right: 32%;
     text-align: center;
     padding: 25px 0;
     border-radius: 50%;
     color: white;
     background-image: linear-gradient(to bottom right, #b839ce, #fabc8d);
-    box-shadow: 5px 5px 15px #bfa8bc;
-}
+     transform: rotate(45deg) translateX(200px) rotate(-45deg);
+    animation: rotate 26s linear infinite; 
+} 
 
+@-webkit-keyframes rotate {
+	from { 	-webkit-transform: rotate(0deg) translateX(200px) rotate(0deg); }
+	to   {  -webkit-transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+}
 .feelslike h3{
     font-size: 18px;
 }
